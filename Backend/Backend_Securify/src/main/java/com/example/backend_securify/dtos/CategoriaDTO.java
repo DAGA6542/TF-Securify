@@ -15,12 +15,12 @@ public class ProductoController {
     @Autowired
     private IProductoService productoService;
 
-    @GetMapping("/listaproducto") //End Point
+    @GetMapping("/listaproducto") 
     public List<ProductoDTO> listarProductos() {
         return productoService.listarProductos();
     }
 
-    @PostMapping("/guardaproducto") //End Point
+    @PostMapping("/guardaproducto") 
     public ProductoDTO guardarProducto(@RequestBody ProductoDTO producto) {
         return productoService.guardarProducto(producto);
     }
